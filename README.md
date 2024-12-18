@@ -1,37 +1,58 @@
-# RAG using AzureopenAI
+# RAG using Azure OpenAI
 
-Azure OpenAI and LangChain to create a vector database and perform question-answering tasks in terminal and using streamlit. 
+This project utilizes Azure OpenAI and LangChain to create a vector database and perform question-answering tasks in the terminal and using Streamlit.
 
 ## Prerequisites
 
-Aceess to a Azure subscription to deploy azure openAI endpoint and to deploy embedding model
+- Access to an Azure subscription to deploy the Azure OpenAI endpoint and the embedding model.
 
 ## Steps
 
-* Create and activate virtual environment </br>
+1. **Create and activate a virtual environment:**
 
-``` pip install virtualenv ``` </br>
-``` python -m venv myenv ``` </br>
-``` myenv\Scripts\activate ``` </br>
+    ```sh
+    pip install virtualenv
+    python -m venv myenv
+    myenv\Scripts\activate
+    ```
 
-* Install the necessary pip packages from the requirements file </br>
+2. **Install the necessary pip packages from the requirements file:**
 
-```pip install -r .\requirements.txt ```
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+3. **Run the vector database script to create embeddings for the text file:** 
+
+   (The embeddings will be stored in the `faiss-db` folder if successful)
+
+    ```sh
+    python vector_db_creator.py
+    ```
+
+4. **Run the main script to interact with the chatbot via the terminal:**
+
+    ```sh
+    python main.py
+    ```
+
+5. **To interact with the chatbot via the UI, run the Streamlit script using the Streamlit command:**
+
+    ```sh
+    streamlit run streamlit.py
+    ```
+
+6. **Deactivate the virtual environment:**
+
+    ```sh
+    deactivate
+    ```
+
+## Usage
+
+This project can be used to perform question-answering tasks using a custom-trained vector database. The terminal interaction provides a command-line interface, while the Streamlit script offers a graphical user interface.
 
 
-* Run vector dB script to create the embeddings for the text file (will be visible in the faiss-db folder if successful) </br>
-``` py vector_db_creator.py ```
+## Contact
 
-* Run the main script to interact with the chatbot via terminal </br>
-
-``` py main.py ``` </br>
-
-* To interact with the chatbot via UI, run the streamlit script using the streamlit command
-
-
-
-``` streamlit run streamlit.py ``` </br>
-
- * Deactivate virtual environment 
-
-``` deactivate ```
+If you have any questions or feedback, feel free to contact me at hegdeb09@gmail.com
